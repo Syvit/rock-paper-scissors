@@ -5,6 +5,7 @@ function game() {
         playRound();
     }
 }
+
 function playRound() {
     const playerSelection = playerChoice();
     const computerSelection = computerChoice();
