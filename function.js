@@ -1,9 +1,10 @@
 const choices = ['rock', 'paper', 'scissors'];
 
 function game() {
-    for (let i = 0; i <= 5; i++) {
-        playRound();
-    }
+    // for (let i = 0; i <= 5; i++) {
+    //     playRound();
+    // }
+    playRound;
 }
 
 function playRound() {
