@@ -1,48 +1,40 @@
 const choices = ['rock', 'paper', 'scissors'];
+const buttons = document.querySelectorAll('button');
+
+
 
 function game() {
-    // for (let i = 0; i <= 5; i++) {
-    //     playRound();
-    // }
-    playRound;
+    for (let i=0; i<5; i++){
+         playerChoice();
+    };
 }
 
 function playRound() {
     const playerSelection = playerChoice();
-    const computerSelection = computerChoice();
     const winner = checkWinner(playerSelection, computerSelection);
+    const computerSelection = computerChoice();
     console.log(winner);
 }
 
 function playerChoice() {
-    let input = prompt('Pick your weapon');
-    while (input == null) {
-        input = prompt('Pick your weapon');
-    }
-    input = input.toLowerCase();
-    let check = validateInput(input);
-    while (check == false) {
-        input = prompt('Pick your weapon. Type it correctly, capitalization does not matter');
-        while (input == null) {
-            input = prompt('Pick your weapon');
-        }
-        input = input.toLowerCase();
-        check = validateInput(input);
-    }
-    return input;
+    buttons.forEach((button) =>{
+        button.addEventListener('click', () => {
+            if (button.id == 'rock'){
+                return 'rock';
+            }  
+            else if (button.id == 'paper'){
+                return 'paper';
+            } 
+            else if (button.id == 'scissors'){
+                return 'scissors';
+            }
+        });
+    });
 }
 
 
 function computerChoice() {
     return choices[Math.floor(Math.random() * choices.length)];
-}
-
-function validateInput(choice) {
-    if (choices.includes(choice)) {
-        return true;
-    } {
-        return false;
-    }
 }
 
 function checkWinner(choiceP, choiceC) {
@@ -56,6 +48,13 @@ function checkWinner(choiceP, choiceC) {
         return 'Computer';
     }
 }
-
-
 game();
+
+// function validateInput(choice) {
+//     if (choices.includes(choice)) {
+//         return true;
+//     } {
+//         return false;
+//     }
+// }
+
