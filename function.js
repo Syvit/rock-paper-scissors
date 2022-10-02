@@ -2,11 +2,16 @@ const choices = ['rock', 'paper', 'scissors'];
 const buttons = document.querySelectorAll('button')
 
 function game() {
-    // for (let i=0; i<5; i++){
-    //      playerChoice();
     playerChoice();
 };
 
+function playerChoice() {
+    buttons.forEach((button) =>{
+        button.addEventListener('click', () => {
+            playRound(button.id);
+        });
+    });
+}
 
 function playRound(playerSelection) {
     // const playerSelection = playerChoice();
@@ -15,17 +20,8 @@ function playRound(playerSelection) {
     console.log(winner);
 }
 
-function playerChoice() {
-    buttons.forEach((button) =>{
-        button.addEventListener('click', e => {
-            playRound(button.id);
-        });
-    });
-}
-
-
 const computerChoice = () => {
-    choices[Math.floor(Math.random() * choices.length)];
+    return choices[Math.floor(Math.random() * choices.length)];
 }
 
 function checkWinner(choiceP, choiceC) {
