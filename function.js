@@ -1,40 +1,31 @@
 const choices = ['rock', 'paper', 'scissors'];
-const buttons = document.querySelectorAll('button');
-
-
+const buttons = document.querySelectorAll('button')
 
 function game() {
-    for (let i=0; i<5; i++){
-         playerChoice();
-    };
-}
+    // for (let i=0; i<5; i++){
+    //      playerChoice();
+    playerChoice();
+};
 
-function playRound() {
-    const playerSelection = playerChoice();
-    const winner = checkWinner(playerSelection, computerSelection);
+
+function playRound(playerSelection) {
+    // const playerSelection = playerChoice();
     const computerSelection = computerChoice();
+    const winner = checkWinner(playerSelection, computerSelection);
     console.log(winner);
 }
 
 function playerChoice() {
     buttons.forEach((button) =>{
-        button.addEventListener('click', () => {
-            if (button.id == 'rock'){
-                return 'rock';
-            }  
-            else if (button.id == 'paper'){
-                return 'paper';
-            } 
-            else if (button.id == 'scissors'){
-                return 'scissors';
-            }
+        button.addEventListener('click', e => {
+            playRound(button.id);
         });
     });
 }
 
 
-function computerChoice() {
-    return choices[Math.floor(Math.random() * choices.length)];
+const computerChoice = () => {
+    choices[Math.floor(Math.random() * choices.length)];
 }
 
 function checkWinner(choiceP, choiceC) {
@@ -49,12 +40,3 @@ function checkWinner(choiceP, choiceC) {
     }
 }
 game();
-
-// function validateInput(choice) {
-//     if (choices.includes(choice)) {
-//         return true;
-//     } {
-//         return false;
-//     }
-// }
-
