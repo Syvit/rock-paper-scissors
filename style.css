@@ -1,13 +1,41 @@
+html{
+    font-family: 'Roboto', sans-serif;
+}
 body{
-    background-color: #16161d;
+    text-align: center;
+    background-color: #222831;
+    font-size: 24px;
+}
+
+h2{
+    font-weight: 500;
+}
+
+.playerScore{
+    color: #60f360;
+}
+
+.ties{
+    color: #DDDDDD;
+}
+
+span{
+    color: #F05454;
+    font-weight: 300;
 }
 main {
+    font-size: 1em;
     color: #f1f1f1;
     display: flex;
     justify-content: center;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
+}
+
+.roundResult {
+display: block;
+margin-bottom: 1em;
 }
 
 #buttons{

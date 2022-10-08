@@ -5,18 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rps</title>
+    <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
     <main>
         <div class = "scoreboard">
-        player score: <h1 class = 'playerScore'>0</h1>
-        computer score: <h1 class = 'computerScore'>0</h1>
-        ties: <h1 class = 'ties'>0</h1>
-        Result:<h1 class = gameResult></h1>
-        <h1 class = winnerText></h1>
+            <h2>Player Score</h2>
+                <span class = 'playerScore'></span>
+            <h2>Computer Score</h2>
+                <span class = 'computerScore'></span>
+            <h2>Ties</h2>
+                <span class = 'ties'></span>
+            <h2>Round Winner:</h2>
+                <span class = roundResult></span>
+                    <span class = 'compSelection'></span>
+                <h2 class = winnerText></h2>
     </div>
     <div id="buttons">
         <button id="rock">Rock</button>

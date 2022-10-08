@@ -1,3 +1,3 @@
 # rock-paper-scissors
 
-Getting much better with functions. Finally making some sense!
+Simple game of Rock, Paper, Scissors.
