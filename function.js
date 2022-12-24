@@ -39,7 +39,7 @@ function resetGame () {
             button.remove();
         });
         const restartGame = document.createElement('button');
-        restartGame.textContent = 'Restart Game';
+        restartGame.textContent = 'Restart';
         document.querySelector('#buttons').append(restartGame);
         
         restartGame.addEventListener('click', () => {
@@ -56,7 +56,7 @@ function resetGame () {
             button.remove();
         });
         const restartGame = document.createElement('button');
-        restartGame.textContent = 'Restart Game';
+        restartGame.textContent = 'Restart';
         document.querySelector('#buttons').append(restartGame);
         
         restartGame.addEventListener('click', () => {
@@ -72,7 +72,7 @@ function resetGame () {
             button.remove();
         });
         const restartGame = document.createElement('button');
-        restartGame.textContent = 'Restart Game';
+        restartGame.textContent = 'Restart';
         document.querySelector('#buttons').append(restartGame);
         
         restartGame.addEventListener('click', () => {
